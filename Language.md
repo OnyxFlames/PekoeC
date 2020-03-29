@@ -5,6 +5,39 @@ Pekoe is a C-like language with a twist, enabling safer memory operations, while
 ## Target Language
 Pekoe will target C99, and use a 3rd-party C compiler to compile the output, taking advantage of the optimizations from the given compiler.
 
+## Keywords
+Keywords are words reserved by the language and cannot be used as identifiers.
+
+### General
+* as
+* cast
+* struct
+* class
+* sizeof
+* addrof
+* static
+* const
+* enum
+* extern
+
+### Loop keywords
+Pekoe supports 4 different types of loops
+* for
+* while
+* do-while
+* until
+
+### Control Flow
+These keywords are used to affect how the program flows
+* switch
+* case
+* break
+* default
+* return
+* if
+* else
+* goto
+
 ## Comments
 Pekoe will support C99 comments, as well as multi-line comments
 ```c
@@ -22,6 +55,8 @@ Pekoe will support C99 comments, as well as multi-line comments
 * i32 and u32
 * i64 and u64
 * f32 and f64
+and
+* void
 
 
 Array variants are also supported, therefore C-strings will be implicitly allowed, but will be replaced with other language constructs.
