@@ -90,3 +90,20 @@ adder : (x : i32) -> (y : i32) -> i32
 }
 ```
 The above code will return a function that takes *y* and adds *x* to *y*, returning the result.
+
+## Including other files
+To deviate from the archaic style of including files that is C, Pekoe uses a simpler format:
+the *using* keyword.
+
+Example: Including the IO and string formatting libraries.
+```c
+using Std.IO.write;
+using Std.String.format;
+
+write("Hello, World!");
+write(format("Goodbye, {}\n", "World!"));
+```
+
+Unlike C, each files inclusion will be logged internally, preventing the need of a system like header guards.
+
+The Std namespace is reserved for Pekoe Standard Library files, and limits the search to the std/ folder next to the compiler
