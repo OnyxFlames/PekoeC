@@ -28,7 +28,7 @@ uint32_t func_mul_pi32_pi32_ru32(int32_t x, int32_t y)
 }
 ```
 
-This will apply to standard library, or user defined types as well.
+This will apply to standard library, and user defined types as well.
 
 ```
 string : class
@@ -56,3 +56,6 @@ cstring func_clearString_pcstring_rcstring(cstring str)
 ```
 
 ### Note: class objects may need to default to passing by pointer to prevent pass-by-value causing weird behavior
+
+## Interacting with native C code
+Pekoe will *not* mangle function calls labeled as C code, as those functions are expected to remain intact when compiling to the target language. See Language.md #InteractingWithC

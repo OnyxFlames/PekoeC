@@ -131,7 +131,7 @@ The above code will return a function that takes *y* and adds *x* to *y*, return
 To deviate from the archaic style of including files that is C, Pekoe uses a simpler format:
 the *using* keyword.
 
-Example: Including the IO and string formatting libraries.
+Example: *Including the IO and string formatting libraries.*
 ```c
 using Std.IO.write;
 using Std.String.format;
@@ -143,3 +143,12 @@ write(format("Goodbye, {}\n", "World!"));
 Unlike C, each files inclusion will be logged internally, preventing the need of a system like header guards.
 
 The Std namespace is reserved for Pekoe Standard Library files, and limits the search to the std/ folder next to the compiler
+
+## Interacting with C code
+Pekoe can utilize C code by labelling a block as
+```c
+extern "C" function_name();
+```
+This function will remain unmangled, and be called directly in the C output.
+This allows Pekoe to utilize C functions within its own code, allowing use of popular C libraries natively in Pekoe (such as SDL).
+This will be expanded upon when the compiler is more developed, and will be used to implement the standard library.
