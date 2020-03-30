@@ -9,9 +9,9 @@ To prevent risk of name shadowing in the emitted code, all names may be mangled 
 ## Mangle rules
 * Parameters are prefixed with p
 * Return types are prefixed with r
+* Class types are prefixed with c
 * Pointer types are suffixed with ptr
 * Array types are suffixed with arr
-* Class types are prefixed with c
 
 A hypothetical example:
 ```
